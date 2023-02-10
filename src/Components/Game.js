@@ -1,44 +1,45 @@
 import React, { useEffect, useState } from "react";
 import Line from "./Line";
 import styles from "./Game.module.css";
-import  ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 
 const SIZE = 4;
 const NUM_OF_LINES = 8;
 
 
-const Backdrop2 = (props) =>{
+const Backdrop2 = (props) => {
   return <div className={styles.backdrop} onClick={props.onClose}></div>
 
 };
 
-const ModalOverlay2 =(props) =>{
+const ModalOverlay2 = (props) => {
 
-  return(
-      
-  <div className={styles.boxStyle}>
+  return (
+
+    <div className={styles.boxStyle}>
       <p className={styles.boxText}>
-      {props.message}
-</p>
-<div className={styles.boxFooter}>
-<button className={styles.boxButton} onClick={props.onClose}>Check your answers</button>
-</div>
-  </div>
+        {props.message} <br />
+        The Secret Code is: {props.codeValue}
+      </p>
+      <div className={styles.boxFooter}>
+        <button className={styles.boxButton} onClick={props.onClose}>Check your answers</button>
+      </div>
+    </div>
   )
 };
-const Message = (props) =>{
-return(
-  <>
- {ReactDOM.createPortal(
-      <Backdrop2 onClose={props.onClose}/>,
-      document.getElementById("backdrop-root")
-    )}
-    {ReactDOM.createPortal(
-      <ModalOverlay2 onClose={props.onClose} message={props.message} />,
-      document.getElementById("overlay-root")
-  ) }
+const Message = (props) => {
+  return (
+    <>
+      {ReactDOM.createPortal(
+        <Backdrop2 onClose={props.onClose} />,
+        document.getElementById("backdrop-root")
+      )}
+      {ReactDOM.createPortal(
+        <ModalOverlay2 onClose={props.onClose} message={props.message} codeValue={props.codeValue} />,
+        document.getElementById("overlay-root")
+      )}
     </>
-)
+  )
 };
 const Game = (props) => {
   const [codeValue, setCodeValue] = useState([]);
@@ -47,7 +48,7 @@ const Game = (props) => {
   const [isAWin, setIsAWin] = useState();
   const [message, setMessage] = useState(" ");
   const [isStarted, setIsStarted] = useState(false);
-  const[isFinished, setIsFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
   const updateActiveStep = (currentActiveStep) => {
     setActiveStep(currentActiveStep);
   };
@@ -55,7 +56,7 @@ const Game = (props) => {
     setIsAWin(isAWin);
     setIsStarted(false);
   };
-  
+
 
   useEffect(() => {
     if (isAWin === true) {
@@ -83,14 +84,14 @@ const Game = (props) => {
     updateActiveStep(0);
     setIsStarted(true);
     setIsAWin(false);
-setIsFinished(false)
+    setIsFinished(false)
     setClear(!clear);
   };
 
-   console.log("secret code ", codeValue);
+  console.log("secret code ", codeValue);
 
   return (
-  
+
     <div className={styles.container}>
       <div className={styles.topBar}>
         <h1>Find The Secret Code</h1>
@@ -123,15 +124,15 @@ setIsFinished(false)
           <p>{message}</p>
         </div> */}
       </div>
-    
-{isFinished && (
-<Message message={message} onClose={()=>{setIsFinished(null)} }
 
-/>)}
-  
+      {isFinished && (
+        <Message message={message} onClose={() => { setIsFinished(null) }} codeValue={codeValue}
 
-  </div>
-    
+        />)}
+
+
+    </div>
+
   );
 };
 export default Game;
