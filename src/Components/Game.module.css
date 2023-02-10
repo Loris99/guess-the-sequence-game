@@ -1,7 +1,7 @@
 .container {
   min-width: calc(63vw + 100 * ((101vw — 507px) / 1920));
   /* margin: 157px; */
-  height: calc(60vh + 100 * ((101vw — 507px) / 1920))  ;
+  min-height: calc(60vh + 100 * ((101vw — 507px) / 1920));
   display: grid;
   grid-template-columns: 1fr 25%;
   grid-template-rows: 70px 1fr;
@@ -77,13 +77,15 @@
   z-index: 10;
   background: rgba(0, 0, 0, 0.75);
 }
-.boxText{
+
+.boxText {
 
   font-size: 1.5rem;
   color: darkblue;
   text-align: center;
 }
-.boxStyle{
+
+.boxStyle {
   position: fixed;
   top: 30vh;
   left: 20%;
@@ -96,8 +98,8 @@
   border-radius: 10px;
   /* background: aliceblue; */
 }
-.boxButton
-{
+
+.boxButton {
   align-self: center;
   justify-self: center;
   width: fit-content;
@@ -112,7 +114,8 @@
   color: rgb(40 128 251);
 
 }
-.boxFooter{
+
+.boxFooter {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
