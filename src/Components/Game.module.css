@@ -1,0 +1,119 @@
+.container {
+  min-width: calc(63vw + 100 * ((101vw — 507px) / 1920));
+  /* margin: 157px; */
+  height: calc(60vh + 100 * ((101vw — 507px) / 1920))  ;
+  display: grid;
+  grid-template-columns: 1fr 25%;
+  grid-template-rows: 70px 1fr;
+  grid-gap: 0px;
+  justify-content: center;
+  align-content: center;
+  border: 3px solid rgb(40 128 251);
+  border-radius: 15px;
+  background-color: #ffe33a6b;
+}
+
+.topBar {
+  grid-column: 1/-1;
+  border-bottom: 3px solid rgb(40 128 251);
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.topBar h1 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: system-ui;
+  font-size: calc(25% + 18px);
+
+  margin: 0 auto;
+}
+
+.sideBar {
+  display: grid;
+  width: 100%;
+}
+
+.linesContainer {
+  display: grid;
+  overflow: auto;
+  padding: 10px;
+  border-right: 3px solid rgb(40 128 251);
+}
+
+.lineDisplay {
+  display: inline-block;
+}
+
+.startButton {
+  align-self: center;
+  justify-self: center;
+  width: 70px;
+  max-width: 100%;
+  height: 40px;
+  border-radius: 30%;
+  background-color: rgb(40 128 251);
+  border-color: rgb(40 128 251);
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffea6a;
+}
+
+.message p {
+  color: rgb(85, 26, 141);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+.boxText{
+
+  font-size: 1.5rem;
+  color: darkblue;
+  text-align: center;
+}
+.boxStyle{
+  position: fixed;
+  top: 30vh;
+  left: 20%;
+  right: 20%;
+  width: 50%;
+  z-index: 100;
+  overflow: hidden;
+  background-color: aliceblue;
+  padding: 40px;
+  border-radius: 10px;
+  /* background: aliceblue; */
+}
+.boxButton
+{
+  align-self: center;
+  justify-self: center;
+  width: fit-content;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ffea6a;
+  border-color: #ffea6a;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(40 128 251);
+
+}
+.boxFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
