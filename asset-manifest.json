@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/guess-the-sequence-game/static/css/main.29b8a03e.css",
+    "main.js": "/guess-the-sequence-game/static/js/main.8583a474.js",
+    "index.html": "/guess-the-sequence-game/index.html",
+    "main.29b8a03e.css.map": "/guess-the-sequence-game/static/css/main.29b8a03e.css.map",
+    "main.8583a474.js.map": "/guess-the-sequence-game/static/js/main.8583a474.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29b8a03e.css",
+    "static/js/main.8583a474.js"
+  ]
+}
