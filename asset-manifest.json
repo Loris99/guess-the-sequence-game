@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/guess-the-sequence-game/static/css/main.4aed2ae6.css",
-    "main.js": "/guess-the-sequence-game/static/js/main.f9d4a673.js",
+    "main.css": "/guess-the-sequence-game/static/css/main.3beb32e3.css",
+    "main.js": "/guess-the-sequence-game/static/js/main.91851f79.js",
     "index.html": "/guess-the-sequence-game/index.html",
-    "main.4aed2ae6.css.map": "/guess-the-sequence-game/static/css/main.4aed2ae6.css.map",
-    "main.f9d4a673.js.map": "/guess-the-sequence-game/static/js/main.f9d4a673.js.map"
+    "main.3beb32e3.css.map": "/guess-the-sequence-game/static/css/main.3beb32e3.css.map",
+    "main.91851f79.js.map": "/guess-the-sequence-game/static/js/main.91851f79.js.map"
   },
   "entrypoints": [
-    "static/css/main.4aed2ae6.css",
-    "static/js/main.f9d4a673.js"
+    "static/css/main.3beb32e3.css",
+    "static/js/main.91851f79.js"
   ]
 }
