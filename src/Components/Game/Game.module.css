@@ -1,6 +1,5 @@
 .container {
   min-width: calc(63vw + 100 * ((101vw — 507px) / 1920));
-  /* margin: 157px; */
   min-height: calc(60vh + 100 * ((101vw — 507px) / 1920));
   display: grid;
   grid-template-columns: 1fr 25%;
@@ -28,7 +27,6 @@
   overflow: hidden;
   font-family: system-ui;
   font-size: calc(25% + 18px);
-
   margin: 0 auto;
 }
 
@@ -59,7 +57,7 @@
   border-color: rgb(40 128 251);
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: calc(16px + 0.390625vw);
   font-weight: 600;
   color: #ffea6a;
 }
@@ -79,7 +77,6 @@
 }
 
 .boxText {
-
   font-size: 1.5rem;
   color: darkblue;
   text-align: center;
@@ -96,12 +93,10 @@
   background-color: aliceblue;
   padding: 40px;
   border-radius: 10px;
-  /* background: aliceblue; */
 }
 
 .boxButton {
   align-self: center;
-  justify-self: center;
   width: fit-content;
   height: 40px;
   border-radius: 10px;
@@ -109,10 +104,9 @@
   border-color: #ffea6a;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: calc(16px + 0.390625vw);
   font-weight: 600;
   color: rgb(40 128 251);
-
 }
 
 .boxFooter {

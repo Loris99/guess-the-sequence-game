@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import styles from "./Line.module.css";
-import DotLine from "./DotLine.js";
-import InputLine from "./InputLine";
+import DotLine from "../DotLine/DotLine";
+import InputLine from "../InputLine/InputLine";
 
 const DIGITS = /[0-9]+/;
 const SIZE = 4;
 const NUM_OF_LINES = 8;
 
-const intialInputs = Array(SIZE).fill('');
+const intialInputs = Array(SIZE).fill("");
 const Line = (props) => {
   const [enteredCode, setEnteredCode] = useState(intialInputs);
   const [circles, setCircles] = useState([]);
-
 
   //to restart the game and clear inputs
   useEffect(() => {
@@ -22,30 +21,13 @@ const Line = (props) => {
   useEffect(() => {});
   //check if input is number & add into the array
   const valueInputChangeHandler = (digitValue, index) => {
-    if (DIGITS.test(digitValue) === false ) {
+    if (DIGITS.test(digitValue) === false) {
       return;
     }
-//     if((digitValue) === ""){
-
-//  const tempEnteredCode = [...enteredCode];
-
-//     tempEnteredCode[index] = digitValue;
-//     setEnteredCode(tempEnteredCode);
-//       }
     const tempEnteredCode = [...enteredCode];
 
     tempEnteredCode[index] = digitValue;
     setEnteredCode(tempEnteredCode);
-
-    //move to the next input
-//     if(index <3){
-//       const nextField = document.getElementsByName(`${index}]`)
-   
-//     if(nextField !== ''){
-// nextField.focus()
-//     }
-//   }
-
   };
 
   //check button
@@ -83,15 +65,10 @@ const Line = (props) => {
 
     if (arr.every((val) => val !== false) && arr.length === SIZE) {
       props.updateIsAWin(true);
-      props.setIsFinished(true)
-      console.log("is the game done:", props.isFinished)
-
+      props.setIsFinished(true);
     } else if (props.activeStep === NUM_OF_LINES - 1) {
-      console.log("num of lines ", NUM_OF_LINES);
       props.updateIsAWin(false);
-      props.setIsFinished(true)
-      console.log("is the game done:", props.isFinished)
-
+      props.setIsFinished(true);
     }
 
     stepCount = stepCount + 1;
